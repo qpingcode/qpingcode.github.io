@@ -2,3 +2,9 @@ index:
   slogan:
     enable: true
     text: Stay Hungry, Stay Foolish.
+post:
+  comments:
+    enable: true
+    type: utterances
+
+custom_html: '<script src="https://utteranc.es/client.js" repo="qpingcode/qpingcode.github.io" issue-term="pathname" theme="github-dark" crossorigin="anonymous" async></script>'
