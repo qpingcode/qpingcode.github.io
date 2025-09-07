@@ -1,5 +1,5 @@
 ---
-title: Create blog with hexo
+title: Create Blog with Hexo
 date: 2025-09-06 23:18:12
 tags:
 ---
