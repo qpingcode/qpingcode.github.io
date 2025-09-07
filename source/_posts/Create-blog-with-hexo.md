@@ -93,8 +93,8 @@ Github上也需要对应的设置 > Settings > Pages > Build and Deployment > So
 Actions 下会多一个 `pages build and deployment` 的任务,等它跑完就可以访问博客域名, 看看是否真正的发布成功了.
 
 ```shell
-hexo deploy
-hexo d  # deploy 可以简写成 d
+hexo g
+hexo d
 ```
 
 ## 安装主题: Fluid
