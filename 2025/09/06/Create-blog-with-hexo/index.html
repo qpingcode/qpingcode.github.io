@@ -28,7 +28,7 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://qpingcode.github.io/images/Create-blog-withhexo-github-deploy-methods.png">
 <meta property="article:published_time" content="2025-09-06T15:18:12.000Z">
-<meta property="article:modified_time" content="2025-09-07T12:43:13.474Z">
+<meta property="article:modified_time" content="2025-09-07T22:44:17.486Z">
 <meta property="article:author" content="qping">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://qpingcode.github.io/images/Create-blog-withhexo-github-deploy-methods.png">
@@ -99,7 +99,7 @@
   <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
     <a class="navbar-brand" href="/">
-      <strong>Fluid</strong>
+      <strong>QPing&#39;s Blog</strong>
     </a>
 
     <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
@@ -224,7 +224,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          659 words
+          834 words
         
       </span>
     
@@ -235,7 +235,7 @@
         
         
         
-          6 mins
+          7 mins
         
       </span>
     
@@ -285,10 +285,10 @@
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">hexo new post &quot;Hello my blog&quot;<br></code></pre></td></tr></table></figure>
 
 <p><code>/source/_posts/</code> 目录下多了一个文件 <code>Hello-my-blog.md</code>.<br>写好博客以后,可以通过以下命令预览.</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">hexo server<br></code></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs shell">hexo server<br><span class="hljs-meta prompt_"># </span><span class="language-bash">或者使用简写 s</span><br>hexo s<br></code></pre></td></tr></table></figure>
 
 <p>通过 generate 命令可以把md文件编译为html文件,可以知道最终发布文件是什么样的.</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">hexo generate<br></code></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs shell">hexo generate<br><span class="hljs-meta prompt_"># </span><span class="language-bash">或者使用简写 g</span><br>hexo g<br></code></pre></td></tr></table></figure>
 
 <h2 id="Hexo-部署"><a href="#Hexo-部署" class="headerlink" title="Hexo 部署"></a>Hexo 部署</h2><p>它本身是支持多种部署方式的:</p>
 <ul>
@@ -314,12 +314,28 @@
             <p>如果仓库是使用的SSH认证(git@xxx&#x2F;xxx.git),那么需要把自己本机的公钥上传到 <code>https://github.com/settings/keys</code> 中, 否则 <code>hexo deploy</code> 会得到一个异常</p>
           </div>
 
+<p>然后需要安装 hexo-deploy-git</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">npm install hexo-deployer-git --save<br></code></pre></td></tr></table></figure>
+
 <p>Github上也需要对应的设置 &gt; Settings &gt; Pages &gt; Build and Deployment &gt; Source 选择 Deploy from a branch, branch 选择 gh-pages&#x2F;<br><img src="/images/Create-blog-withhexo-github-deploy-methods.png" srcset="/img/loading.gif" lazyload alt="github deploy method"></p>
 <p>上面的步骤都完成后,就可以使用 deploy 命令发布了, 发布后可以检查github上 gh-pages 分支下是否是你刚刚提交的内容.<br>Actions 下会多一个 <code>pages build and deployment</code> 的任务,等它跑完就可以访问博客域名, 看看是否真正的发布成功了.</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs shell">hexo deploy<br>hexo d  # deploy 可以简写成 d<br></code></pre></td></tr></table></figure>
 
-<h2 id="安装主题-Fluid"><a href="#安装主题-Fluid" class="headerlink" title="安装主题: Fluid"></a>安装主题: Fluid</h2><p><a target="_blank" rel="noopener" href="https://github.com/fluid-dev/hexo-theme-fluid">Reference</a></p>
-<h2 id="评论系统-Gitalk"><a href="#评论系统-Gitalk" class="headerlink" title="评论系统: Gitalk"></a>评论系统: Gitalk</h2><h2 id="部署方式-Actions-Github-Pages"><a href="#部署方式-Actions-Github-Pages" class="headerlink" title="部署方式 Actions &amp; Github Pages"></a>部署方式 Actions &amp; Github Pages</h2><h3 id="部署后404问题解决"><a href="#部署后404问题解决" class="headerlink" title="部署后404问题解决"></a>部署后404问题解决</h3>
+<h2 id="安装主题-Fluid"><a href="#安装主题-Fluid" class="headerlink" title="安装主题: Fluid"></a>安装主题: Fluid</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">npm install --save hexo-theme-fluid<br></code></pre></td></tr></table></figure>
+
+<p>首页是有个Slogan, 有打字机的效果, 改里面的内容的话可以<a target="_blank" rel="noopener" href="https://hexo.fluid-dev.com/docs/guide/#slogan-%E6%89%93%E5%AD%97%E6%9C%BA">参考</a> 修改 _config.fluid.yml.</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs yml"><span class="hljs-attr">index:</span><br>  <span class="hljs-attr">slogan:</span><br>    <span class="hljs-attr">enable:</span> <span class="hljs-literal">true</span><br>    <span class="hljs-attr">text:</span> <span class="hljs-string">Stay</span> <span class="hljs-string">Hungry,</span> <span class="hljs-string">Stay</span> <span class="hljs-string">Foolish.</span><br></code></pre></td></tr></table></figure>
+
+<p><a target="_blank" rel="noopener" href="https://github.com/fluid-dev/hexo-theme-fluid">Reference</a></p>
+<h2 id="评论系统-Gitalk"><a href="#评论系统-Gitalk" class="headerlink" title="评论系统: Gitalk"></a>评论系统: Gitalk</h2><p>hexo fluid支持很多<a target="_blank" rel="noopener" href="https://hexo.fluid-dev.com/docs/guide/#%E8%AF%84%E8%AE%BA">评论插件</a>, 如果想把评论托管在 github issues.</p>
+<p>有两个选择:</p>
+<ul>
+<li>Gitalk 不依赖于三方服务</li>
+<li>Utterances 集成简单, 只需要引用一个javascript文件, 但是需要依赖于 Utterances 的服务</li>
+</ul>
+<p>Gitalk 前端需要暴露 clientSecret, 恶意第三方可以很容易知道你的 Github Application的信息, 窃取用户信息.<br>还是选用 Utterances 吧, 修改 _config.fluid.yml, 添加以下配置,就可以了.</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs yml"><span class="hljs-attr">post:</span><br>  <span class="hljs-attr">comments:</span><br>    <span class="hljs-attr">enable:</span> <span class="hljs-literal">true</span><br>    <span class="hljs-attr">type:</span> <span class="hljs-string">utterances</span><br><br><span class="hljs-attr">utterances:</span><br>  <span class="hljs-attr">repo:</span> <span class="hljs-string">&#x27;qpingcode/qpingcode.github.io&#x27;</span><br>  <span class="hljs-attr">issue_term:</span> <span class="hljs-string">&#x27;pathname&#x27;</span><br></code></pre></td></tr></table></figure>
+
                 
               </div>
             
@@ -395,21 +411,29 @@
   
     <article id="comments" lazyload>
       
-  <div id="gitalk-container"></div>
   <script type="text/javascript">
-    Fluid.utils.loadComments('#gitalk-container', function() {
-      Fluid.utils.createCssLink('/css/gitalk.css')
-      Fluid.utils.createScript('https://lib.baomitu.com/gitalk/1.8.0/gitalk.min.js', function() {
-        var options = Object.assign(
-          {"clientID":"Ov23liBjs2m92ofp5F2r","clientSecret":"dca4528f5f60613ec33c4c4de765faef2939be89","repo":"qpingcode.github.io","owner":"qpingcode","admin":["qpingcode"],"language":"zh-CN","labels":["Gitalk"],"perPage":10,"pagerDirection":"last","distractionFreeMode":false,"createIssueManually":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token","id":"location.pathname"},
-          {
-            id: '8087687229240f0dbbe7d1268ab2f3ab'
-          }
-        )
-        var gitalk = new Gitalk(options);
-        gitalk.render('gitalk-container');
-      });
-    });
+    Fluid.utils.loadComments('#comments', function() {
+      var light = 'github-light';
+      var dark = 'github-dark';
+      var schema = document.documentElement.getAttribute('data-user-color-scheme');
+      if (schema === 'dark') {
+        schema = dark;
+      } else {
+        schema = light;
+      }
+      window.UtterancesThemeLight = light;
+      window.UtterancesThemeDark = dark;
+      var s = document.createElement('script');
+      s.setAttribute('src', 'https://utteranc.es/client.js');
+      s.setAttribute('repo', 'qpingcode/qpingcode.github.io');
+      s.setAttribute('issue-term', 'pathname');
+      
+      s.setAttribute('label', 'utterances');
+      
+      s.setAttribute('theme', schema);
+      s.setAttribute('crossorigin', 'anonymous');
+      document.getElementById('comments').appendChild(s);
+    })
   </script>
   <noscript>Please enable JavaScript to view the comments</noscript>
 
