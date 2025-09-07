@@ -3,6 +3,9 @@ index:
     enable: true
     text: Stay Hungry, Stay Foolish.
 
+navbar:
+  blog_title: QPing's Blog
+
 post:
   comments:
     enable: true

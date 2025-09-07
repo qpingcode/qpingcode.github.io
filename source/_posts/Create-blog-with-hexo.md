@@ -80,6 +80,12 @@ deploy:
 如果仓库是使用的SSH认证(git@xxx/xxx.git),那么需要把自己本机的公钥上传到 `https://github.com/settings/keys` 中, 否则 `hexo deploy` 会得到一个异常
 {% endnote %}
 
+然后需要安装 hexo-deploy-git
+
+```shell
+npm install hexo-deployer-git --save
+```
+
 Github上也需要对应的设置 > Settings > Pages > Build and Deployment > Source 选择 Deploy from a branch, branch 选择 gh-pages/
 ![github deploy method](images/Create-blog-withhexo-github-deploy-methods.png)
 
@@ -110,11 +116,9 @@ index:
 
 ## 评论系统: Gitalk
 
-对于, 原本的文档写的很粗糙.
+hexo fluid支持很多[评论插件](https://hexo.fluid-dev.com/docs/guide/#%E8%AF%84%E8%AE%BA), 如果想把评论托管在 github issues.
 
-hexo fluid支持很多[评论插件](https://hexo.fluid-dev.com/docs/guide/#%E8%AF%84%E8%AE%BA), 我希望评论托管在 github issues.
-
-有两个可以选择:
+有两个选择:
 
 - Gitalk 不依赖于三方服务
 - Utterances 集成简单, 只需要引用一个javascript文件, 但是需要依赖于 Utterances 的服务
