@@ -48,7 +48,7 @@ HandleCar myDelegate = (Vehicle vehicle) => vehicle.Run();
 事实上上面的代码会提示无法转换类型，我们必须借助泛型。
 ```C#
 Action<Vehicle> handleVe = (Vehicle vehicle) => vehicle.Run();
-Action<Car> handleCar = handleVe;
+Action<Car> handleCar = handleVe;  # 逆变成功！
 handleCar(new Car());
 ```
 
