@@ -34,11 +34,12 @@ public class Car : Vehicle
 }
 ```
 
-然后假定我想要一个函数 HandleCar， 可以接收一个 Car 作为入参.
-那我们实现的时候能否传入一个通用的处理 Vehicle 的函数吗？
+然后假定预定义了一个delegate HandleCar， 函数签名是  (Car car) => void
+那我们实现的时候能否是传入Vehicle吗？比如： (Vehicle vehicle) => void 吗
 
-试想，delegate 在运行的时候会接收一个 Car，具体是 myDelegate 来处理。
-而 Car 是可以很安全的转换为 Vehicle.
+试想，delegate 在运行的时候会接收一个 Car.
+具体是 myDelegate 来处理， myDelegate拿到一个Car需要转换成 vehicle, 而 Car 是可以很安全的转换为 Vehicle.
+看起来完美，我们“实现”了函数的转换.
 ```
 public delegate void HandleCar(Car car);
 HandleCar myDelegate = (Vehicle vehicle) => vehicle.Run();
