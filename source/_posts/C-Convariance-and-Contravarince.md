@@ -35,9 +35,9 @@ public class Car : Vehicle
 ```
 
 假定预定义了一个delegate HandleCar， 函数签名是  (Car car) => void
-那我们实现的时候能否是传入Vehicle吗？比如： (Vehicle vehicle) => void 吗
+那我们实现的时候能否可以传入Vehicle？比如： (Vehicle vehicle) => void 吗
 
-试想，delegate 在运行的时候会接收一个 Car.
+原则上是可以的，试想，delegate 在运行的时候会接收一个 Car.
 具体实现是 myDelegate 来处理， myDelegate 拿到一个 Car 需要转换成 vehicle, 而 Car 是可以很安全的转换为 Vehicle.
 看起来完美，我们“实现”了函数的转换.
 ```
