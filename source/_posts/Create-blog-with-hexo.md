@@ -53,13 +53,11 @@ hexo g
 - Deploy from a branch: 自己在本地编译, 然后将编译后的 html/js/css 上传到 github 某个分支, github 通过 actions 发布到 github pages.
 
 我喜欢自己在本地编译, 然后发布到github, 这样可以知道编译的最终产物是什么, 方便调试.
-通过 [deploy](https://hexo.io/zh-cn/docs/one-command-deployment) 命令可以实现我的需求.
-
-这个命令作用支持多种发布方式,我是通过 Git pages 部署, 它会默默的做以下几件事情
+[deploy](https://hexo.io/zh-cn/docs/one-command-deployment) 这个命令可以支持本地编译然后发布，它默认执行下面的步骤：
 
 - 创建 .deploy_git 目录
 - 将 md 文件编译后放到 .deploy_git 中
-- 在 .deploy_git 中进行git 初始化 (可看到这个目录下多了 .git 目录)
+- 在 .deploy_git 中进行 git 初始化 (可看到这个目录下多了 .git 目录)
 - 根据配置将变更提到到指定的**远程仓库**和**远程分支**
 
 按上面的步骤可知我们需要告诉 hexo 远程仓库的地址和分支, 所以需要在 `_config.yml` 中添加以下配置.
@@ -67,7 +65,7 @@ hexo g
 ``` yaml
 deploy:
   type: git
-  repo: git@github.com:qpingcode/qpingcode.github.io.git
+  repo: https://github.com/qpingcode/qpingcode.github.io.git
   branch: gh-pages
   message: "Site updated: {{ now('yyyy-MM-DD HH:mm:ss') }}"
 ```
@@ -77,7 +75,7 @@ deploy:
 {% endnote %}
 
 {% note warning %}
-如果仓库是使用的SSH认证(git@xxx/xxx.git),那么需要把自己本机的公钥上传到 `https://github.com/settings/keys` 中, 否则 `hexo deploy` 会得到一个异常
+如果仓库是使用的SSH认证(git@xxx/xxx.git),那么需要把自己本机的公钥上传到 `https://github.com/settings/keys` 中, 否则 `hexo deploy` 会得到一个异常: Spawn failed
 {% endnote %}
 
 然后需要安装 hexo-deploy-git
