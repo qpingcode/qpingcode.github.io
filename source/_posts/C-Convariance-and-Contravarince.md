@@ -5,11 +5,12 @@ tags: ["C#"]
 ---
 
 第一次接触 C# 的协变和逆变的时候，会有些懵，为什么 in 是逆变呢。“逆”到底和什么方向相反呢?
-其实他们解决的问题很简单：解决类型的安全转换. 
+其实他们解决的问题很简单：解决类型的安全转换.
 
 ## 函数的转换
 
 为了演示，假定现在有两个类， Car 和 Vehicle, 其中 Car 继承 Vehicle.
+
 ```c#
 public class Vehicle
 {
@@ -40,13 +41,16 @@ public class Car : Vehicle
 原则上是可以的，试想，delegate 在运行的时候会接收一个 Car.
 具体实现是 myDelegate 来处理， myDelegate 拿到一个 Car 需要转换成 vehicle, 而 Car 是可以很安全的转换为 Vehicle.
 看起来完美，我们“实现”了函数的转换.
-```
+
+```C#
 public delegate void HandleCar(Car car);
 HandleCar myDelegate = (Vehicle vehicle) => vehicle.Run();
 ```
 
 ## 逆变
+
 事实上上面的代码会提示无法转换类型，我们必须借助泛型。
+
 ```C#
 Action<Vehicle> handleVe = (Vehicle vehicle) => vehicle.Run();
 Action<Car> handleCar = handleVe;  // 逆变成功！
@@ -70,13 +74,12 @@ Func<Car> GetCar = () => new Car();
 Func<Vehicle> GetVehicle = GetCar; // 协变成功！
 Vehicle vehicle = GetVehicle();
 ```
+
 ## 总结
 
 我们可以得出几个结论
 
 - 泛型才支持逆变与协变
 - 逆变与协变本质是为了类型的安全转换
-    - 子类型可以安全的转换为父类型
-    - 但是父类型不能安全转为子类型
-
-
+  - 子类型可以安全的转换为父类型
+  - 但是父类型不能安全转为子类型
