@@ -112,7 +112,7 @@ index:
 
 [Reference](https://github.com/fluid-dev/hexo-theme-fluid)
 
-## 评论系统: Gitalk
+## 评论系统
 
 hexo fluid支持很多[评论插件](https://hexo.fluid-dev.com/docs/guide/#%E8%AF%84%E8%AE%BA), 如果想把评论托管在 github issues.
 
