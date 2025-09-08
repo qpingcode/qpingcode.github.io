@@ -1,1 +1,1 @@
-Blog to share sth
+Blog to share something
