@@ -4,7 +4,7 @@ date: 2025-09-08 15:46:53
 tags: ["C#"]
 ---
 
-第一次接触 C# 的协变和逆变的时候，会有些懵，为什么in是逆变呢。“逆”到底和什么方向相反呢?
+第一次接触 C# 的协变和逆变的时候，会有些懵，为什么 in 是逆变呢。“逆”到底和什么方向相反呢?
 其实他们解决的问题很简单：解决类型的安全转换. 
 
 ## 函数的转换
@@ -34,11 +34,11 @@ public class Car : Vehicle
 }
 ```
 
-然后假定预定义了一个delegate HandleCar， 函数签名是  (Car car) => void
+假定预定义了一个delegate HandleCar， 函数签名是  (Car car) => void
 那我们实现的时候能否是传入Vehicle吗？比如： (Vehicle vehicle) => void 吗
 
 试想，delegate 在运行的时候会接收一个 Car.
-具体是 myDelegate 来处理， myDelegate拿到一个Car需要转换成 vehicle, 而 Car 是可以很安全的转换为 Vehicle.
+具体实现是 myDelegate 来处理， myDelegate 拿到一个 Car 需要转换成 vehicle, 而 Car 是可以很安全的转换为 Vehicle.
 看起来完美，我们“实现”了函数的转换.
 ```
 public delegate void HandleCar(Car car);
