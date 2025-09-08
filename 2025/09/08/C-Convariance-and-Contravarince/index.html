@@ -19,23 +19,22 @@
   <meta name="author" content="qping">
   <meta name="keywords" content="">
   
-    <meta name="description" content="Hexo 安装根据首页教程 可以快速搭建一个本地博客. 12345npm install hexo-cli -g     # 全局安装hexo-cli,这样就可以在控制台中使用hexo命令,比如 Hexo inithexo init blog              # 初始化,等同于git clone + npm intallcd blog         npm installhexo se">
+    <meta name="description" content="第一次接触 C# 的协变和逆变的时候，会有些懵，为什么 in 是逆变呢。“逆”到底和什么方向相反呢?其实他们解决的问题很简单：解决类型的安全转换. 函数的转换为了演示，假定现在有两个类， Car 和 Vehicle, 其中 Car 继承 Vehicle. 123456789101112131415161718192021public class Vehicle&#123;    protected">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Create Blog with Hexo">
-<meta property="og:url" content="https://qpingcode.github.io/2025/09/06/Create-blog-with-hexo/index.html">
+<meta property="og:title" content="C# 协变与逆变">
+<meta property="og:url" content="https://qpingcode.github.io/2025/09/08/C-Convariance-and-Contravarince/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="Hexo 安装根据首页教程 可以快速搭建一个本地博客. 12345npm install hexo-cli -g     # 全局安装hexo-cli,这样就可以在控制台中使用hexo命令,比如 Hexo inithexo init blog              # 初始化,等同于git clone + npm intallcd blog         npm installhexo se">
+<meta property="og:description" content="第一次接触 C# 的协变和逆变的时候，会有些懵，为什么 in 是逆变呢。“逆”到底和什么方向相反呢?其实他们解决的问题很简单：解决类型的安全转换. 函数的转换为了演示，假定现在有两个类， Car 和 Vehicle, 其中 Car 继承 Vehicle. 123456789101112131415161718192021public class Vehicle&#123;    protected">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://qpingcode.github.io/images/Create-blog-withhexo-github-deploy-methods.png">
-<meta property="article:published_time" content="2025-09-06T15:18:12.000Z">
-<meta property="article:modified_time" content="2025-09-08T13:10:49.516Z">
+<meta property="article:published_time" content="2025-09-08T07:46:53.000Z">
+<meta property="article:modified_time" content="2025-09-08T13:11:43.297Z">
 <meta property="article:author" content="qping">
+<meta property="article:tag" content="C#">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://qpingcode.github.io/images/Create-blog-withhexo-github-deploy-methods.png">
   
   
   
-  <title>Create Blog with Hexo - Hexo</title>
+  <title>C# 协变与逆变 - Hexo</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -201,7 +200,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="Create Blog with Hexo"></span>
+            <span id="subtitle" data-typed-text="C# 协变与逆变"></span>
           
         </div>
 
@@ -212,8 +211,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2025-09-06 23:18" pubdate>
-          September 6, 2025 pm
+        <time datetime="2025-09-08 15:46" pubdate>
+          September 8, 2025 pm
         </time>
       </span>
     
@@ -224,7 +223,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          809 words
+          489 words
         
       </span>
     
@@ -235,7 +234,7 @@
         
         
         
-          7 mins
+          5 mins
         
       </span>
     
@@ -272,68 +271,38 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">Create Blog with Hexo</h1>
+            <h1 id="seo-header">C# 协变与逆变</h1>
             
             
               <div class="markdown-body">
                 
-                <h2 id="Hexo-安装"><a href="#Hexo-安装" class="headerlink" title="Hexo 安装"></a>Hexo 安装</h2><p>根据<a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/">首页教程</a> 可以快速搭建一个本地博客.</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs shell">npm install hexo-cli -g     # 全局安装hexo-cli,这样就可以在控制台中使用hexo命令,比如 Hexo init<br>hexo init blog              # 初始化,等同于git clone + npm intall<br>cd blog         <br>npm install<br>hexo server                 # 预览博客修改<br></code></pre></td></tr></table></figure>
+                <p>第一次接触 C# 的协变和逆变的时候，会有些懵，为什么 in 是逆变呢。“逆”到底和什么方向相反呢?<br>其实他们解决的问题很简单：解决类型的安全转换.</p>
+<h2 id="函数的转换"><a href="#函数的转换" class="headerlink" title="函数的转换"></a>函数的转换</h2><p>为了演示，假定现在有两个类， Car 和 Vehicle, 其中 Car 继承 Vehicle.</p>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><code class="hljs c#"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title">Vehicle</span><br>&#123;<br>    <span class="hljs-keyword">protected</span> <span class="hljs-built_in">int</span> speed = <span class="hljs-number">0</span>;<br><br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Run</span>()</span>&#123;<br>        Console.WriteLine(<span class="hljs-string">$&quot;Run with speed <span class="hljs-subst">&#123;speed&#125;</span> m/s&quot;</span>);<br>    &#125;<br>&#125;<br><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title">Car</span> : <span class="hljs-title">Vehicle</span> <br>&#123;<br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Car</span>()</span><br>    &#123;<br>        speed = <span class="hljs-number">10</span>;<br>    &#125;<br><br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Honk</span>()</span><br>    &#123;<br>        Console.WriteLine(<span class="hljs-string">&quot;The car pressed the horn.&quot;</span>);<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
 
-<h2 id="Hexo-基本用法"><a href="#Hexo-基本用法" class="headerlink" title="Hexo 基本用法"></a>Hexo 基本用法</h2><p>本地搭建完博客后,我们需要了解一些常用的hexo命令</p>
-<h3 id="新建文章"><a href="#新建文章" class="headerlink" title="新建文章"></a>新建文章</h3><p>可以像下面这样新建一个文章</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">hexo new post &quot;Hello my blog&quot;<br></code></pre></td></tr></table></figure>
+<p>假定预定义了一个delegate HandleCar， 函数签名是  (Car car) &#x3D;&gt; void<br>那我们实现的时候能否可以传入Vehicle？比如： (Vehicle vehicle) &#x3D;&gt; void 吗</p>
+<p>原则上是可以的，试想，delegate 在运行的时候会接收一个 Car.<br>具体实现是 myDelegate 来处理， myDelegate 拿到一个 Car 需要转换成 vehicle, 而 Car 是可以很安全的转换为 Vehicle.<br>看起来完美，我们“实现”了函数的转换.</p>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs C#"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-built_in">delegate</span> <span class="hljs-keyword">void</span> <span class="hljs-title">HandleCar</span>(<span class="hljs-params">Car car</span>)</span>;<br>HandleCar myDelegate = (Vehicle vehicle) =&gt; vehicle.Run();<br></code></pre></td></tr></table></figure>
 
-<p><code>/source/_posts/</code> 目录下多了一个文件 <code>Hello-my-blog.md</code>.<br>写好博客以后,可以通过以下命令预览.</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs shell">hexo server<br><span class="hljs-meta prompt_"># </span><span class="language-bash">或者使用简写 s</span><br>hexo s<br></code></pre></td></tr></table></figure>
+<h2 id="逆变"><a href="#逆变" class="headerlink" title="逆变"></a>逆变</h2><p>事实上上面的代码会提示无法转换类型，我们必须借助泛型。</p>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs C#">Action&lt;Vehicle&gt; handleVe = (Vehicle vehicle) =&gt; vehicle.Run();<br>Action&lt;Car&gt; handleCar = handleVe;  <span class="hljs-comment">// 逆变成功！</span><br>handleCar(<span class="hljs-keyword">new</span> Car());<br></code></pre></td></tr></table></figure>
 
-<p>通过 generate 命令可以把md文件编译为html文件,可以知道最终发布文件是什么样的.</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs shell">hexo generate<br><span class="hljs-meta prompt_"># </span><span class="language-bash">或者使用简写 g</span><br>hexo g<br></code></pre></td></tr></table></figure>
+<p>我们必须显示的告诉编译器，类型 T 是作为参数的，而不是返回结果，所以需要在前面加上 in 关键字。可以看 Action 的源码已经给我们添加了：</p>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs c#"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-built_in">delegate</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Action</span>&lt;<span class="hljs-keyword">in</span> <span class="hljs-title">T</span>&gt;(<span class="hljs-params">T obj</span>)</span>;<br></code></pre></td></tr></table></figure>
 
-<h2 id="Hexo-部署"><a href="#Hexo-部署" class="headerlink" title="Hexo 部署"></a>Hexo 部署</h2><p>它本身是支持多种部署方式的:</p>
+<p>逆变的概念来自于范畴论，逆是说：Car 属于 Vehicle，但是 <code>Action&lt;Vehicle&gt;</code> 属于 <code>Action&lt;Car&gt;</code>，这个方向相反了。</p>
+<h2 id="协变"><a href="#协变" class="headerlink" title="协变"></a>协变</h2><p>如果我们思考下可以得知，返回值是和参数相反的，称为协变.</p>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs c#">Func&lt;Car&gt; GetCar = () =&gt; <span class="hljs-keyword">new</span> Car();<br>Func&lt;Vehicle&gt; GetVehicle = GetCar; <span class="hljs-comment">// 协变成功！</span><br>Vehicle vehicle = GetVehicle();<br></code></pre></td></tr></table></figure>
+
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>我们可以得出几个结论</p>
 <ul>
-<li>Github Actions: 将 md&#x2F;yml&#x2F;json 等文件传到 github, 由 github 通过 actions 编译成 html&#x2F;js&#x2F;css 并发布到 github pages.</li>
-<li>Deploy from a branch: 自己在本地编译, 然后将编译后的 html&#x2F;js&#x2F;css 上传到 github 某个分支, github 通过 actions 发布到 github pages.</li>
+<li>泛型才支持逆变与协变</li>
+<li>逆变与协变本质是为了类型的安全转换<ul>
+<li>子类型可以安全的转换为父类型</li>
+<li>但是父类型不能安全转为子类型</li>
 </ul>
-<p>我喜欢自己在本地编译, 然后发布到github, 这样可以知道编译的最终产物是什么, 方便调试.<br><a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/one-command-deployment">deploy</a> 这个命令可以支持本地编译然后发布，它默认执行下面的步骤：</p>
-<ul>
-<li>创建 .deploy_git 目录</li>
-<li>将 md 文件编译后放到 .deploy_git 中</li>
-<li>在 .deploy_git 中进行 git 初始化 (可看到这个目录下多了 .git 目录)</li>
-<li>根据配置将变更提到到指定的<strong>远程仓库</strong>和<strong>远程分支</strong></li>
+</li>
 </ul>
-<p>按上面的步骤可知我们需要告诉 hexo 远程仓库的地址和分支, 所以需要在 <code>_config.yml</code> 中添加以下配置.</p>
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-attr">deploy:</span><br>  <span class="hljs-attr">type:</span> <span class="hljs-string">git</span><br>  <span class="hljs-attr">repo:</span> <span class="hljs-string">https://github.com/qpingcode/qpingcode.github.io.git</span><br>  <span class="hljs-attr">branch:</span> <span class="hljs-string">gh-pages</span><br>  <span class="hljs-attr">message:</span> <span class="hljs-string">&quot;Site updated: <span class="hljs-template-variable">&#123;&#123; now(&#x27;yyyy-MM-DD HH:mm:ss&#x27;) &#125;&#125;</span>&quot;</span><br></code></pre></td></tr></table></figure>
-
-<div class="note note-warning">
-            <p>如果是自定义域名,一定要<strong>source目录下创建CNAME</strong>, 否则  <code>hexo deploy</code> 发布会你会得到404.</p>
-          </div>
-
-<div class="note note-warning">
-            <p>如果仓库是使用的SSH认证(git@xxx&#x2F;xxx.git),那么需要把自己本机的公钥上传到 <code>https://github.com/settings/keys</code> 中, 否则 <code>hexo deploy</code> 会得到一个异常: Spawn failed</p>
-          </div>
-
-<p>然后需要安装 hexo-deploy-git</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">npm install hexo-deployer-git --save<br></code></pre></td></tr></table></figure>
-
-<p>Github上也需要对应的设置 &gt; Settings &gt; Pages &gt; Build and Deployment &gt; Source 选择 Deploy from a branch, branch 选择 gh-pages&#x2F;<br><img src="/images/Create-blog-withhexo-github-deploy-methods.png" srcset="/img/loading.gif" lazyload alt="github deploy method"></p>
-<p>上面的步骤都完成后,就可以使用 deploy 命令发布了, 发布后可以检查github上 gh-pages 分支下是否是你刚刚提交的内容.<br>Actions 下会多一个 <code>pages build and deployment</code> 的任务,等它跑完就可以访问博客域名, 看看是否真正的发布成功了.</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs shell">hexo g<br>hexo d<br></code></pre></td></tr></table></figure>
-
-<h2 id="安装主题-Fluid"><a href="#安装主题-Fluid" class="headerlink" title="安装主题: Fluid"></a>安装主题: Fluid</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">npm install --save hexo-theme-fluid<br></code></pre></td></tr></table></figure>
-
-<p>首页是有个Slogan, 有打字机的效果, 改里面的内容的话可以<a target="_blank" rel="noopener" href="https://hexo.fluid-dev.com/docs/guide/#slogan-%E6%89%93%E5%AD%97%E6%9C%BA">参考</a> 修改 _config.fluid.yml.</p>
-<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs yml"><span class="hljs-attr">index:</span><br>  <span class="hljs-attr">slogan:</span><br>    <span class="hljs-attr">enable:</span> <span class="hljs-literal">true</span><br>    <span class="hljs-attr">text:</span> <span class="hljs-string">Stay</span> <span class="hljs-string">Hungry,</span> <span class="hljs-string">Stay</span> <span class="hljs-string">Foolish.</span><br></code></pre></td></tr></table></figure>
-
-<p><a target="_blank" rel="noopener" href="https://github.com/fluid-dev/hexo-theme-fluid">Reference</a></p>
-<h2 id="评论系统"><a href="#评论系统" class="headerlink" title="评论系统"></a>评论系统</h2><p>hexo fluid支持很多<a target="_blank" rel="noopener" href="https://hexo.fluid-dev.com/docs/guide/#%E8%AF%84%E8%AE%BA">评论插件</a>, 如果想把评论托管在 github issues.</p>
-<p>有两个选择:</p>
-<ul>
-<li>Gitalk 不依赖于三方服务</li>
-<li>Utterances 集成简单, 只需要引用一个javascript文件, 但是需要依赖于 Utterances 的服务</li>
-</ul>
-<p>Gitalk 前端需要暴露 clientSecret, 恶意第三方可以很容易知道你的 Github Application的信息, 窃取用户信息.<br>还是选用 Utterances 吧, 修改 _config.fluid.yml, 添加以下配置,就可以了.</p>
-<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs yml"><span class="hljs-attr">post:</span><br>  <span class="hljs-attr">comments:</span><br>    <span class="hljs-attr">enable:</span> <span class="hljs-literal">true</span><br>    <span class="hljs-attr">type:</span> <span class="hljs-string">utterances</span><br><br><span class="hljs-attr">utterances:</span><br>  <span class="hljs-attr">repo:</span> <span class="hljs-string">&#x27;qpingcode/qpingcode.github.io&#x27;</span><br>  <span class="hljs-attr">issue_term:</span> <span class="hljs-string">&#x27;pathname&#x27;</span><br></code></pre></td></tr></table></figure>
 
                 
               </div>
@@ -343,6 +312,13 @@
               <div class="post-metas my-3">
   
   
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/C/" class="print-no-link">#C#</a>
+      
+    </div>
+  
 </div>
 
 
@@ -351,8 +327,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>Create Blog with Hexo</div>
-      <div>https://qpingcode.github.io/2025/09/06/Create-blog-with-hexo/</div>
+      <div>C# 协变与逆变</div>
+      <div>https://qpingcode.github.io/2025/09/08/C-Convariance-and-Contravarince/</div>
     </div>
     <div class="license-meta">
       
@@ -364,7 +340,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>Posted on</div>
-          <div>September 6, 2025</div>
+          <div>September 8, 2025</div>
         </div>
       
       
@@ -396,15 +372,15 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2025/09/08/C-Convariance-and-Contravarince/" title="C# 协变与逆变">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">C# 协变与逆变</span>
-                        <span class="visible-mobile">Previous</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
+                    
+                      <a href="/2025/09/06/Create-blog-with-hexo/" title="Create Blog with Hexo">
+                        <span class="hidden-mobile">Create Blog with Hexo</span>
+                        <span class="visible-mobile">Next</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
                     
                   </article>
                 </div>
