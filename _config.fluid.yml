@@ -1,3 +1,5 @@
+favicon: /images/favicon3.svg
+
 index:
   slogan:
     enable: true
