@@ -26,13 +26,13 @@ tags:
 2. 一个可正常接收验证码的手机号(中国的就行)；
 3. 与账号地区一致的真实账单地址。
 
-账单地址一般需要填写以下信息：
+账单地址一般需要填写以下信息 (选择一个免税州,虽然我不知道有何用)：
 
 ```text
-街道地址（Street）
-城市（City）
-州（State）
-邮政编码（ZIP Code）
+街道地址 (Street): 123 SW Morrison St
+城市 (City): Portland
+州 (State): OR (Oregon)
+邮编(Zip Code): 9720
 ```
 
 > 重点是注册的时候使用美国ip地址的代理, 否则付款方式中强制需要美国信用卡, 就没有none的选项
@@ -54,3 +54,6 @@ tags:
 在 iPhone 上安装 ChatGPT，并登录准备使用的 OpenAI 账号。然后在 App 内选择升级到 ChatGPT Plus，进入 Apple 的订阅付款页面并确认购买。
 
 至此，ChatGPT Plus 就开通完成了，之后便可以使用账号中提供的 Codex 功能。
+lus
+
+手机上安装 ChatGPT, 并升级为 Plus, 使用apple支付.
