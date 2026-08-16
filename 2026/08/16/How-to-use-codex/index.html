@@ -19,22 +19,21 @@
   <meta name="author" content="qping">
   <meta name="keywords" content="">
   
-    <meta name="description" content="第一次接触 C# 的协变和逆变的时候，会有些懵，为什么 in 是逆变呢。“逆”到底和什么方向相反呢?其实他们解决的问题很简单：解决类型的安全转换. 函数的转换为了演示，假定现在有两个类， Car 和 Vehicle, 其中 Car 继承 Vehicle. 123456789101112131415161718192021public class Vehicle&#123;    protected">
+    <meta name="description" content="我自己一直是在用 copilot 提供的 GPT-5.6 sol, 自从改了协议以后, 一天就消耗了100$的token, 已经承受不住了.试了下智谱的code plan, 430一个月, 太智障了, 写完都是bug, 很多bug都找不出来, 需要人去辅助它.于是想要尝试下 codex (claude封号严重一直不想试了), 但是折腾了好几天.主要是因为我原本的美区账号被锁了, 于是重新办了一张电">
 <meta property="og:type" content="article">
-<meta property="og:title" content="C# 协变与逆变">
-<meta property="og:url" content="https://qpingcode.github.io/2025/09/08/C-Convariance-and-Contravarince/index.html">
+<meta property="og:title" content="How to use codex in china">
+<meta property="og:url" content="https://qpingcode.github.io/2026/08/16/How-to-use-codex/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="第一次接触 C# 的协变和逆变的时候，会有些懵，为什么 in 是逆变呢。“逆”到底和什么方向相反呢?其实他们解决的问题很简单：解决类型的安全转换. 函数的转换为了演示，假定现在有两个类， Car 和 Vehicle, 其中 Car 继承 Vehicle. 123456789101112131415161718192021public class Vehicle&#123;    protected">
+<meta property="og:description" content="我自己一直是在用 copilot 提供的 GPT-5.6 sol, 自从改了协议以后, 一天就消耗了100$的token, 已经承受不住了.试了下智谱的code plan, 430一个月, 太智障了, 写完都是bug, 很多bug都找不出来, 需要人去辅助它.于是想要尝试下 codex (claude封号严重一直不想试了), 但是折腾了好几天.主要是因为我原本的美区账号被锁了, 于是重新办了一张电">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2025-09-08T07:46:53.000Z">
-<meta property="article:modified_time" content="2025-09-08T13:13:41.873Z">
+<meta property="article:published_time" content="2026-08-15T23:17:00.000Z">
+<meta property="article:modified_time" content="2026-08-16T11:29:43.859Z">
 <meta property="article:author" content="qping">
-<meta property="article:tag" content="C#">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>C# 协变与逆变 - Hexo</title>
+  <title>How to use codex in china - Hexo</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -200,7 +199,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="C# 协变与逆变"></span>
+            <span id="subtitle" data-typed-text="How to use codex in china"></span>
           
         </div>
 
@@ -211,8 +210,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2025-09-08 15:46" pubdate>
-          September 8, 2025 pm
+        <time datetime="2026-08-16 07:17" pubdate>
+          August 16, 2026 am
         </time>
       </span>
     
@@ -223,7 +222,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          489 words
+          374 words
         
       </span>
     
@@ -234,7 +233,7 @@
         
         
         
-          5 mins
+          4 mins
         
       </span>
     
@@ -271,38 +270,29 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">C# 协变与逆变</h1>
+            <h1 id="seo-header">How to use codex in china</h1>
             
             
               <div class="markdown-body">
                 
-                <p>第一次接触 C# 的协变和逆变的时候，会有些懵，为什么 in 是逆变呢。“逆”到底和什么方向相反呢?<br>其实他们解决的问题很简单：解决类型的安全转换.</p>
-<h2 id="函数的转换"><a href="#函数的转换" class="headerlink" title="函数的转换"></a>函数的转换</h2><p>为了演示，假定现在有两个类， Car 和 Vehicle, 其中 Car 继承 Vehicle.</p>
-<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><code class="hljs c#"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title">Vehicle</span><br>&#123;<br>    <span class="hljs-keyword">protected</span> <span class="hljs-built_in">int</span> speed = <span class="hljs-number">0</span>;<br><br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Run</span>()</span>&#123;<br>        Console.WriteLine(<span class="hljs-string">$&quot;Run with speed <span class="hljs-subst">&#123;speed&#125;</span> m/s&quot;</span>);<br>    &#125;<br>&#125;<br><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title">Car</span> : <span class="hljs-title">Vehicle</span> <br>&#123;<br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Car</span>()</span><br>    &#123;<br>        speed = <span class="hljs-number">10</span>;<br>    &#125;<br><br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Honk</span>()</span><br>    &#123;<br>        Console.WriteLine(<span class="hljs-string">&quot;The car pressed the horn.&quot;</span>);<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+                <p>我自己一直是在用 copilot 提供的 GPT-5.6 sol, 自从改了协议以后, 一天就消耗了100$的token, 已经承受不住了.<br>试了下智谱的code plan, 430一个月, 太智障了, 写完都是bug, 很多bug都找不出来, 需要人去辅助它.<br>于是想要尝试下 codex (claude封号严重一直不想试了), 但是折腾了好几天.<br>主要是因为我原本的美区账号被锁了, 于是重新办了一张电话卡, 重新注册美区账号.<br>记录下过程.</p>
+<h2 id="1-注册一个美区apple-id"><a href="#1-注册一个美区apple-id" class="headerlink" title="1. 注册一个美区apple id"></a>1. 注册一个美区apple id</h2><p>在网页端, 开启代理, 使用美国IP, 注册apple id<br>如果之前已经注册过了,那么需要:</p>
+<ol>
+<li>新的邮箱</li>
+<li>新的手机号</li>
+<li>账单地址(参考下面的)</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs note">街道地址 (Street): 123 SW Morrison St<br>城市 (City): Portland<br>州 (State): OR (Oregon)<br>邮编(Zip Code): 9720<br></code></pre></td></tr></table></figure>
 
-<p>假定预定义了一个delegate HandleCar， 函数签名是  (Car car) &#x3D;&gt; void<br>那我们实现的时候能否可以传入Vehicle？比如： (Vehicle vehicle) &#x3D;&gt; void 吗</p>
-<p>原则上是可以的，试想，delegate 在运行的时候会接收一个 Car.<br>具体实现是 myDelegate 来处理， myDelegate 拿到一个 Car 需要转换成 vehicle, 而 Car 是可以很安全的转换为 Vehicle.<br>看起来完美，我们“实现”了函数的转换.</p>
-<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs C#"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-built_in">delegate</span> <span class="hljs-keyword">void</span> <span class="hljs-title">HandleCar</span>(<span class="hljs-params">Car car</span>)</span>;<br>HandleCar myDelegate = (Vehicle vehicle) =&gt; vehicle.Run();<br></code></pre></td></tr></table></figure>
-
-<h2 id="逆变"><a href="#逆变" class="headerlink" title="逆变"></a>逆变</h2><p>事实上上面的代码会提示无法转换类型，我们必须借助泛型。</p>
-<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs C#">Action&lt;Vehicle&gt; handleVe = (Vehicle vehicle) =&gt; vehicle.Run();<br>Action&lt;Car&gt; handleCar = handleVe;  <span class="hljs-comment">// 逆变成功！</span><br>handleCar(<span class="hljs-keyword">new</span> Car());<br></code></pre></td></tr></table></figure>
-
-<p>我们必须显示的告诉编译器，类型 T 是作为参数的，而不是返回结果，所以需要在前面加上 in 关键字。可以看 Action 的源码已经给我们添加了：</p>
-<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs c#"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-built_in">delegate</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Action</span>&lt;<span class="hljs-keyword">in</span> <span class="hljs-title">T</span>&gt;(<span class="hljs-params">T obj</span>)</span>;<br></code></pre></td></tr></table></figure>
-
-<p>逆变的概念来自于范畴论，逆是说：Car 属于 Vehicle，但是 <code>Action&lt;Vehicle&gt;</code> 属于 <code>Action&lt;Car&gt;</code>，这个方向相反了。</p>
-<h2 id="协变"><a href="#协变" class="headerlink" title="协变"></a>协变</h2><p>如果我们思考下可以得知，返回值是和参数相反的，称为协变.</p>
-<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs c#">Func&lt;Car&gt; GetCar = () =&gt; <span class="hljs-keyword">new</span> Car();<br>Func&lt;Vehicle&gt; GetVehicle = GetCar; <span class="hljs-comment">// 协变成功！</span><br>Vehicle vehicle = GetVehicle();<br></code></pre></td></tr></table></figure>
-
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>我们可以得出几个结论</p>
-<ul>
-<li>泛型才支持逆变与协变</li>
-<li>逆变与协变本质是为了类型的安全转换<ul>
-<li>子类型可以安全的转换为父类型</li>
-<li>但是父类型不能安全转为子类型</li>
-</ul>
-</li>
-</ul>
+<blockquote>
+<p>重点是注册的时候使用美国ip地址的代理, 否则付款方式中强制需要美国信用卡, 就没有none的选项</p>
+</blockquote>
+<h2 id="2-购买apple充值卡"><a href="#2-购买apple充值卡" class="headerlink" title="2. 购买apple充值卡"></a>2. 购买apple充值卡</h2><p>网上说之前支付宝切换地区到美国可以购买,但是我试了找不到购买入口了, 应该是没了.<br>可以在pockyt上买, 地址 <a target="_blank" rel="noopener" href="https://shop.pockyt.io/goods/apple%20gift%20card">https://shop.pockyt.io/goods/apple%20gift%20card</a></p>
+<blockquote>
+<p>注意: pockyt上买的是美国的礼品卡, 只能在美国apple id上兑换消费</p>
+</blockquote>
+<h2 id="3-兑换"><a href="#3-兑换" class="headerlink" title="3. 兑换"></a>3. 兑换</h2><p>在手机上登录美区 apple id, 并兑换礼品卡</p>
+<h2 id="4-升级gpt-plus"><a href="#4-升级gpt-plus" class="headerlink" title="4. 升级gpt plus"></a>4. 升级gpt plus</h2><p>手机上按照ChatGPT, 并升级为Plus, 使用apple支付.</p>
 
                 
               </div>
@@ -312,13 +302,6 @@
               <div class="post-metas my-3">
   
   
-    <div class="post-meta">
-      <i class="iconfont icon-tags"></i>
-      
-        <a href="/tags/C/" class="print-no-link">#C#</a>
-      
-    </div>
-  
 </div>
 
 
@@ -327,8 +310,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>C# 协变与逆变</div>
-      <div>https://qpingcode.github.io/2025/09/08/C-Convariance-and-Contravarince/</div>
+      <div>How to use codex in china</div>
+      <div>https://qpingcode.github.io/2026/08/16/How-to-use-codex/</div>
     </div>
     <div class="license-meta">
       
@@ -340,7 +323,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>Posted on</div>
-          <div>September 8, 2025</div>
+          <div>August 16, 2026</div>
         </div>
       
       
@@ -372,18 +355,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2026/08/16/How-to-use-codex/" title="How to use codex in china">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">How to use codex in china</span>
-                        <span class="visible-mobile">Previous</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2025/09/06/Create-blog-with-hexo/" title="Create Blog with Hexo">
-                        <span class="hidden-mobile">Create Blog with Hexo</span>
+                      <a href="/2025/09/08/C-Convariance-and-Contravarince/" title="C# 协变与逆变">
+                        <span class="hidden-mobile">C# 协变与逆变</span>
                         <span class="visible-mobile">Next</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
