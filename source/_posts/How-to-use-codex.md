@@ -1,44 +1,56 @@
 ---
-title: How to use codex in china
+title: 在中国如何订阅 ChatGPT Plus 并使用 Codex
 date: 2026-08-16 07:17:00
 tags:
+  - Codex
+  - ChatGPT
 ---
 
-我自己一直是在用 copilot 提供的 GPT-5.6 sol, 自从改了协议以后, 一天就消耗了100$的token, 已经承受不住了.
-试了下智谱的code plan, 430一个月, 太智障了, 写完都是bug, 很多bug都找不出来, 需要人去辅助它.
-于是想要尝试下 codex (claude封号严重一直不想试了), 但是折腾了好几天.
-主要是因为我原本的美区账号被锁了, 于是重新办了一张电话卡, 重新注册美区账号.
-记录下过程.
+我之前一直在使用 Copilot 提供的 GPT-5.6 Sol。自从计费规则调整后，一天就消耗了将近 100 美元的 Token，成本实在有些吃不消。
 
-## 1. 注册一个美区apple id
+后来又试了一下智谱的 Code Plan：每月 430 元，但实际体验并不理想。生成的代码经常带有 Bug，有些问题还无法自行定位，依然需要大量人工介入。
 
-在网页端, 开启代理, 使用美国IP, 注册apple id
-如果之前已经注册过了,那么需要:
+于是决定尝试 Codex。至于 Claude，由于听说封号情况比较严重，暂时没有考虑。不过，开通 Codex 的过程比预想中曲折，我前后折腾了好几天。
 
-1. 新的邮箱
-2. 新的手机号
-3. 账单地址(参考下面的)
+主要原因是我原来的美区账号被锁了，只能重新准备手机号并注册一个新的美区 Apple ID。这里把完整过程记录下来，供有类似需求的人参考。
 
-```note
-街道地址 (Street): 123 SW Morrison St
-城市 (City): Portland
-州 (State): OR (Oregon)
-邮编(Zip Code): 9720
+> 本文记录的是我个人的实际操作经历。账号注册、地区限制和支付政策都可能发生变化，请以 Apple 与 OpenAI 的最新规则为准，并使用真实、可验证的个人信息。
+
+## 1. 注册美区 Apple ID
+
+在网页端开启代理，连接美国 IP，然后注册 Apple ID。
+
+如果之前已经注册过其他地区的账号，通常还需要准备：
+
+1. 一个未注册过 Apple ID 的邮箱；
+2. 一个可正常接收验证码的手机号(中国的就行)；
+3. 与账号地区一致的真实账单地址。
+
+账单地址一般需要填写以下信息：
+
+```text
+街道地址（Street）
+城市（City）
+州（State）
+邮政编码（ZIP Code）
 ```
 
 > 重点是注册的时候使用美国ip地址的代理, 否则付款方式中强制需要美国信用卡, 就没有none的选项
 
-## 2. 购买apple充值卡
+## 2. 购买 Apple Gift Card
 
-网上说之前支付宝切换地区到美国可以购买,但是我试了找不到购买入口了, 应该是没了.
-可以在pockyt上买, 地址 https://shop.pockyt.io/goods/apple%20gift%20card
+网上曾有人分享过通过支付宝切换地区购买 Apple Gift Card 的方法，但我实际操作时已经找不到入口，可能已经下线。
 
-> 注意: pockyt上买的是美国的礼品卡, 只能在美国apple id上兑换消费
+最后选择在 [Pockyt](https://shop.pockyt.io/goods/apple%20gift%20card) 购买美区 Apple Gift Card。
 
-## 3. 兑换
+> 注意：美区 Apple Gift Card 只能兑换到美区 Apple ID，通常无法跨区使用；
 
-在手机上登录美区 apple id, 并兑换礼品卡
+## 3. 兑换礼品卡
 
-## 4. 升级gpt plus
+在 iPhone 上登录美区 Apple ID，然后进入 App Store 兑换礼品卡。兑换完成后，余额会显示在该 Apple ID 的账户中。
 
-手机上按照ChatGPT, 并升级为Plus, 使用apple支付.
+## 4. 升级 ChatGPT Plus
+
+在 iPhone 上安装 ChatGPT，并登录准备使用的 OpenAI 账号。然后在 App 内选择升级到 ChatGPT Plus，进入 Apple 的订阅付款页面并确认购买。
+
+至此，ChatGPT Plus 就开通完成了，之后便可以使用账号中提供的 Codex 功能。
