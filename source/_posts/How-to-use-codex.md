@@ -41,7 +41,7 @@ tags:
 
 最后选择在 [Pockyt](https://shop.pockyt.io/goods/apple%20gift%20card) 购买美区 Apple Gift Card。
 
-> 注意：美区 Apple Gift Card 只能兑换到美区 Apple ID，通常无法跨区使用；
+> 注意：美区 Apple Gift Card 只能兑换到美区 Apple ID，无法跨区使用；
 
 ## 3. 兑换礼品卡
 
