@@ -46,10 +46,14 @@
   document.querySelectorAll('.screenshot').forEach((figure) => {
     const image = figure.querySelector('img');
     if (!image) return;
-    const markLoaded = () => figure.classList.add('has-image');
-    if (image.complete && image.naturalWidth > 0) markLoaded();
+    const markLoaded = () => figure.classList.remove('image-missing');
+    const markMissing = () => figure.classList.add('image-missing');
+    if (image.complete) {
+      if (image.naturalWidth > 0) markLoaded();
+      else markMissing();
+    }
     image.addEventListener('load', markLoaded);
-    image.addEventListener('error', () => figure.classList.remove('has-image'));
+    image.addEventListener('error', markMissing);
   });
 
   const toast = document.querySelector('.copy-toast');
