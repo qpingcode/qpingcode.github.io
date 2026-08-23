@@ -48,12 +48,9 @@
     if (!image) return;
     const markLoaded = () => figure.classList.remove('image-missing');
     const markMissing = () => figure.classList.add('image-missing');
-    if (image.complete) {
-      if (image.naturalWidth > 0) markLoaded();
-      else markMissing();
-    }
     image.addEventListener('load', markLoaded);
     image.addEventListener('error', markMissing);
+    if (image.naturalWidth > 0) markLoaded();
   });
 
   const toast = document.querySelector('.copy-toast');
