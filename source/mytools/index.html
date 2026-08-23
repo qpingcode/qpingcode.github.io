@@ -71,17 +71,17 @@
 
     <main id="manual-content">
       <section class="hero" id="overview">
-        <div class="eyebrow"><span></span> WINDOWS 效率工具</div>
-        <h1>少一点切换，<br><em>快一点完成。</em></h1>
-        <p class="hero-lead">MyTools 把应用、文件、剪贴板、计算、翻译和常用操作放进同一个搜索框。这份手册从第一次启动开始，带你走完常用功能和插件演示。</p>
+        <div class="eyebrow"><span></span> A LIGHTER RAYCAST / ALFRED FOR WINDOWS</div>
+        <h1>更轻、更快，<br><em>也更懂你的工作流。</em></h1>
+        <p class="hero-lead">MyTools 是一款类似 Raycast、Alfred 的 Windows 效率工具：用更小的内存占用和更快的响应速度，把应用、文件与常用操作汇聚到一个搜索框；还可以直接使用 AI，按自己的想法随时创建和修改插件。</p>
         <div class="hero-actions">
           <a class="button primary" href="#install">开始使用 <span aria-hidden="true">↓</span></a>
           <a class="button secondary" href="https://github.com/qpingcode/MyTools/blob/main/README.zh-CN.md" target="_blank" rel="noopener">查看项目说明</a>
         </div>
         <div class="hero-facts" aria-label="产品信息">
-          <div><b>Alt + Space</b><span>默认搜索热键</span></div>
-          <div><b>Windows 10 / 11</b><span>支持的操作系统</span></div>
-          <div><b>开源 · MIT</b><span>自由使用与扩展</span></div>
+          <div><b>更小内存</b><span>轻量常驻，减少系统负担</span></div>
+          <div><b>更快响应</b><span>一个热键立即进入工作流</span></div>
+          <div><b>AI 自定义插件</b><span>描述需求，创建自己的工具</span></div>
         </div>
       </section>
 
@@ -96,7 +96,7 @@
             <span class="choice-tag">推荐</span>
             <h3>完整安装包</h3>
             <p>下载文件名以 <code>-setup.exe</code> 结尾的版本，按安装向导完成安装。</p>
-            <a href="https://github.com/qpingcode/MyTools/releases" target="_blank" rel="noopener">前往 Releases 下载 →</a>
+            <a href="https://github.com/qpingcode/MyTools#installation" target="_blank" rel="noopener">前往项目首页安装说明 →</a>
           </article>
           <article class="choice-card">
             <span class="choice-tag">便携</span>
@@ -106,14 +106,19 @@
           </article>
         </div>
         <ol class="steps">
-          <li><span>1</span><div><b>选择发布通道</b><p>Stable 为稳定版；Beta 包含最新功能。可在设置中更改“更新通道”。</p></div></li>
-          <li><span>2</span><div><b>运行安装程序</b><p>如果 SmartScreen 显示“未知发布者”，确认文件来自官方仓库后选择“更多信息 → 仍要运行”。</p></div></li>
+          <li><span>1</span><div><b>打开项目首页的安装说明</b><p>前往 <a class="inline-link" href="https://github.com/qpingcode/MyTools#installation" target="_blank" rel="noopener">MyTools 项目首页 → Installation</a>，根据表格选择 Stable 或 Beta。Stable 为稳定版；Beta 包含最新功能。</p></div></li>
+          <li><span>2</span><div><b>运行安装程序</b><p>由于安装包暂未启用 Authenticode 签名，Windows SmartScreen 可能阻止启动。确认安装包来自 <code>qpingcode/MyTools</code> 官方仓库后，点击“更多信息”，再点击“仍要运行”。</p></div></li>
           <li><span>3</span><div><b>找到托盘图标</b><p>启动后 MyTools 常驻系统托盘。双击图标或按 <kbd>Alt</kbd><i>+</i><kbd>Space</kbd> 打开搜索。</p></div></li>
         </ol>
+        <figure class="screenshot" data-image="images/01-smartscreen.png">
+          <img src="images/01-smartscreen.png" alt="Windows SmartScreen 点击更多信息和仍要运行的操作截图">
+          <div class="shot-placeholder"><span class="shot-icon">▧</span><b>截图位置 · Windows SmartScreen</b><small>点击“更多信息”，再点击“仍要运行”</small><code>images/01-smartscreen.png</code></div>
+          <figcaption>图 1-1：SmartScreen 提示时选择“更多信息 → 仍要运行”</figcaption>
+        </figure>
         <figure class="screenshot" data-image="images/01-install.png">
-          <img src="images/01-install.png" alt="MyTools 安装与首次启动截图">
-          <div class="shot-placeholder"><span class="shot-icon">▧</span><b>截图位置 · 安装与首次启动</b><small>建议展示 Releases 下载项、安装完成后的托盘图标</small><code>images/01-install.png · 建议 1600 × 900</code></div>
-          <figcaption>图 1：下载并首次启动 MyTools</figcaption>
+          <img src="images/01-install.png" alt="MyTools 首次启动截图">
+          <div class="shot-placeholder"><span class="shot-icon">▧</span><b>截图位置 · 首次启动</b><small>展示 MyTools 搜索主界面</small><code>images/01-install.png</code></div>
+          <figcaption>图 1-2：安装完成并首次启动 MyTools</figcaption>
         </figure>
       </section>
 
@@ -160,11 +165,18 @@
           <article><span class="feature-icon">⌘</span><div><h3>快速选中</h3><p>按 <kbd>Ctrl</kbd> + <kbd>1</kbd>…<kbd>9</kbd> 直接执行对应结果；<kbd>Ctrl</kbd> + <kbd>0</kbd> 对应第 10 项。</p></div></article>
           <article><span class="feature-icon">•••</span><div><h3>更多操作</h3><p>选中结果后按 <kbd>Ctrl</kbd> + <kbd>K</kbd> 展开更多操作，例如复制、打开目录或使用其他方式执行。</p></div></article>
         </div>
-        <figure class="screenshot" data-image="images/03-global-search.png">
-          <img src="images/03-global-search.png" alt="MyTools 全局搜索 Visual Studio Code 截图">
-          <div class="shot-placeholder"><span class="shot-icon">▧</span><b>截图位置 · 搜索主界面</b><small>建议输入 vscode，并展示 Ctrl+数字与 Ctrl+K 操作提示</small><code>images/03-global-search.png · 建议 1600 × 900</code></div>
-          <figcaption>图 3：全局搜索与结果快捷操作</figcaption>
-        </figure>
+        <div class="screenshot-grid">
+          <figure class="screenshot" data-image="images/03-global-search.png">
+            <img src="images/03-global-search.png" alt="MyTools 全局搜索及 Ctrl 加数字快捷选择截图">
+            <div class="shot-placeholder"><span class="shot-icon">▧</span><b>截图位置 · 搜索主界面</b><code>images/03-global-search.png</code></div>
+            <figcaption>图 3-1：全局搜索与 Ctrl + 数字</figcaption>
+          </figure>
+          <figure class="screenshot" data-image="images/03-actions.png">
+            <img src="images/03-actions.png" alt="MyTools Ctrl 加 K 更多操作截图">
+            <div class="shot-placeholder"><span class="shot-icon">▧</span><b>截图位置 · 更多操作</b><code>images/03-actions.png</code></div>
+            <figcaption>图 3-2：按 Ctrl + K 查看更多操作</figcaption>
+          </figure>
+        </div>
       </section>
 
       <section class="manual-section" id="preferences">
@@ -194,11 +206,11 @@
         <div class="term-table" role="table" aria-label="插件设置说明">
           <div class="term-row head" role="row"><span>设置项</span><span>作用</span><span>建议</span></div>
           <div class="term-row" role="row"><b>热键 Hotkey</b><p>从任意窗口直接打开该插件。</p><small>避免与系统或其他软件热键冲突。</small></div>
-          <div class="term-row" role="row"><b>别名 Alias</b><p>先输入别名，再只搜索该插件。例如 <code>guid 10</code>。</p><small>使用短而好记的字母组合。</small></div>
+          <div class="term-row" role="row"><b>别名 Alias</b><p>输入别名后再按一个<strong>空格</strong>，即可进入该插件的专属搜索或详情页。例如输入 <code>guid </code> 进入 UUID 插件，再继续输入 <code>10</code>。</p><small>别名与参数之间必须保留空格；建议使用短而好记的字母组合。</small></div>
           <div class="term-row" role="row"><b>启用 Enabled</b><p>控制插件是否加载和参与搜索。</p><small>暂时不用的插件可以关闭。</small></div>
           <div class="term-row" role="row"><b>全局 Global</b><p>开启后，无需先输入别名，插件结果会直接混入全局搜索。</p><small>高频插件开启；低频插件关闭以减少干扰。</small></div>
         </div>
-        <aside class="callout info"><b>Alias 与 Global 的区别</b><p><strong>Alias</strong> 是“明确进入某个插件”；<strong>Global</strong> 是“让插件主动参与所有搜索”。例如 UUID 默认别名为 <code>guid</code> 且不参与全局搜索；计算器别名为 <code>calc</code>，同时支持全局实时计算。</p></aside>
+        <aside class="callout info"><b>Alias 与 Global 的区别</b><p><strong>Alias</strong> 是“明确进入某个插件”：输入别名并按空格，例如 <code>guid </code>、<code>calc </code>，就会进入对应插件的搜索或详情页。<strong>Global</strong> 是“让插件主动参与所有搜索”，无需输入别名。例如 UUID 默认别名为 <code>guid</code> 且不参与全局搜索；计算器别名为 <code>calc</code>，同时支持全局实时计算。</p></aside>
         <figure class="screenshot" data-image="images/05-plugin-settings.png">
           <img src="images/05-plugin-settings.png" alt="MyTools 插件设置截图">
           <div class="shot-placeholder"><span class="shot-icon">▧</span><b>截图位置 · 插件设置</b><small>展示热键、Alias、启用与 Global 开关</small><code>images/05-plugin-settings.png</code></div>
@@ -268,7 +280,7 @@
           <div><h3 class="minor-title">全局实时计算</h3><p>计算器已参与全局搜索，直接输入表达式即可看到结果，无需先进入插件。</p><div class="command-demo wide"><span>输入</span><code>1231+123132</code><i>=</i><strong>124363</strong></div></div>
           <div><h3 class="minor-title">查看计算历史</h3><p>输入别名 <code>calc</code> 进入计算器，再查看之前的计算记录。选中结果可复制到剪贴板。</p><div class="command-demo wide"><span>输入</span><code>calc</code><i>→</i><strong>历史列表</strong></div></div>
         </div>
-        <figure class="screenshot" data-image="images/09-calculator.png"><img src="images/09-calculator.png" alt="计算器实时计算与历史截图"><div class="shot-placeholder"><span class="shot-icon">▧</span><b>截图位置 · 计算器</b><small>建议展示全局实时结果与 calc 历史列表</small><code>images/09-calculator.png</code></div><figcaption>图 9：实时计算并查看历史</figcaption></figure>
+        <div class="screenshot-grid"><figure class="screenshot" data-image="images/09-calculator.png"><img src="images/09-calculator.png" alt="计算器全局实时计算截图"><div class="shot-placeholder"><span class="shot-icon">▧</span><b>截图位置 · 实时计算</b><code>images/09-calculator.png</code></div><figcaption>图 9-1：全局实时计算</figcaption></figure><figure class="screenshot" data-image="images/09-calculator-history.png"><img src="images/09-calculator-history.png" alt="计算器历史记录截图"><div class="shot-placeholder"><span class="shot-icon">▧</span><b>截图位置 · 计算历史</b><code>images/09-calculator-history.png</code></div><figcaption>图 9-2：输入 calc 查看历史</figcaption></figure></div>
       </section>
 
       <section class="manual-section" id="browser-data">
@@ -279,7 +291,7 @@
           <li><span>2</span><div><b>搜索历史</b><p>输入最近访问页面的标题或地址，结果副标题会标注“历史”。按回车用默认浏览器打开。</p></div></li>
           <li><span>3</span><div><b>取消历史记录</b><p>进入“设置 → 插件 → 书签与历史记录”，关闭“搜索历史记录”；也可单独关闭某个浏览器。</p></div></li>
         </ol>
-        <figure class="screenshot" data-image="images/10-browser-history.png"><img src="images/10-browser-history.png" alt="搜索浏览器书签与历史记录截图"><div class="shot-placeholder"><span class="shot-icon">▧</span><b>截图位置 · 书签与历史</b><small>展示搜索结果及“搜索历史记录”开关</small><code>images/10-browser-history.png</code></div><figcaption>图 10：搜索书签、历史并调整来源</figcaption></figure>
+        <div class="screenshot-grid"><figure class="screenshot" data-image="images/10-browser-history.png"><img src="images/10-browser-history.png" alt="搜索浏览器书签截图"><div class="shot-placeholder"><span class="shot-icon">▧</span><b>截图位置 · 搜索书签</b><code>images/10-browser-history.png</code></div><figcaption>图 10-1：搜索浏览器书签</figcaption></figure><figure class="screenshot" data-image="images/10-browser-settings.png"><img src="images/10-browser-settings.png" alt="书签与历史记录插件设置截图"><div class="shot-placeholder"><span class="shot-icon">▧</span><b>截图位置 · 来源设置</b><code>images/10-browser-settings.png</code></div><figcaption>图 10-2：调整浏览器及历史记录来源</figcaption></figure></div>
       </section>
 
       <section class="manual-section" id="search-engine">
@@ -289,7 +301,7 @@
           <div><h3 class="minor-title">怎么添加</h3><p>进入“设置 → 插件 → 搜索引擎”，新增名称和 URL。用 <code>{query}</code> 标记关键词插入位置。</p><div class="code-card"><header><span>示例 · DuckDuckGo</span><button class="copy-button" type="button">复制</button></header><pre><code>https://duckduckgo.com/?q={query}</code></pre></div></div>
         </div>
         <aside class="callout info"><b>一个引擎打开多个地址</b><p>URL 输入框支持每行一个地址。执行一次搜索时，可同时打开多个目标页面。</p></aside>
-        <figure class="screenshot" data-image="images/11-search-engine.png"><img src="images/11-search-engine.png" alt="搜索引擎插件设置截图"><div class="shot-placeholder"><span class="shot-icon">▧</span><b>截图位置 · 浏览器引擎</b><small>展示一次搜索和新增引擎设置</small><code>images/11-search-engine.png</code></div><figcaption>图 11：使用并添加搜索引擎</figcaption></figure>
+        <div class="screenshot-grid"><figure class="screenshot" data-image="images/11-search-engine.png"><img src="images/11-search-engine.png" alt="使用 GitHub 搜索引擎截图"><div class="shot-placeholder"><span class="shot-icon">▧</span><b>截图位置 · 使用引擎</b><code>images/11-search-engine.png</code></div><figcaption>图 11-1：使用 GitHub 搜索</figcaption></figure><figure class="screenshot" data-image="images/11-search-engine-settings.png"><img src="images/11-search-engine-settings.png" alt="添加 DuckDuckGo 搜索引擎截图"><div class="shot-placeholder"><span class="shot-icon">▧</span><b>截图位置 · 添加引擎</b><code>images/11-search-engine-settings.png</code></div><figcaption>图 11-2：添加 DuckDuckGo</figcaption></figure></div>
       </section>
 
       <section class="manual-section" id="snippets">
@@ -299,7 +311,7 @@
           <div><h3 class="minor-title">添加短语</h3><ol class="steps compact"><li><span>1</span><div><b>打开插件设置</b><p>进入“设置 → 插件 → 快捷文本”。</p></div></li><li><span>2</span><div><b>新增一行</b><p>触发词填写 <code>email</code>，短语内容填写你的邮箱。</p></div></li><li><span>3</span><div><b>保存</b><p>回到目标输入框准备调用。</p></div></li></ol></div>
           <div><h3 class="minor-title">使用短语</h3><ol class="steps compact"><li><span>1</span><div><b>唤起搜索</b><p>按 <kbd>Alt</kbd> + <kbd>Space</kbd>。</p></div></li><li><span>2</span><div><b>输入触发词</b><p>输入 <code>email</code> 找到刚添加的短语。</p></div></li><li><span>3</span><div><b>粘贴</b><p>按回车，内容自动进入原来的窗口。</p></div></li></ol></div>
         </div>
-        <figure class="screenshot" data-image="images/12-quick-text.png"><img src="images/12-quick-text.png" alt="快捷文本添加与使用截图"><div class="shot-placeholder"><span class="shot-icon">▧</span><b>截图位置 · 快捷文本</b><small>展示短语设置表格与搜索触发效果</small><code>images/12-quick-text.png</code></div><figcaption>图 12：添加并调用快捷文本</figcaption></figure>
+        <div class="screenshot-grid"><figure class="screenshot" data-image="images/12-quick-text.png"><img src="images/12-quick-text.png" alt="查询快捷文本截图"><div class="shot-placeholder"><span class="shot-icon">▧</span><b>截图位置 · 调用短语</b><code>images/12-quick-text.png</code></div><figcaption>图 12-1：通过触发词调用快捷文本</figcaption></figure><figure class="screenshot" data-image="images/12-quick-text-settings.png"><img src="images/12-quick-text-settings.png" alt="快捷文本设置截图"><div class="shot-placeholder"><span class="shot-icon">▧</span><b>截图位置 · 添加短语</b><code>images/12-quick-text-settings.png</code></div><figcaption>图 12-2：在插件设置中添加短语</figcaption></figure></div>
       </section>
 
       <section class="manual-section" id="translation">
@@ -311,7 +323,7 @@
           <article><span class="feature-icon">★</span><div><h3>查看收藏</h3><p>切换到“收藏”列表，浏览已保存项目，也可以重新翻译或删除。</p></div></article>
           <article><span class="feature-icon">↶</span><div><h3>历史列表</h3><p>打开“历史记录”查看最近翻译，并快速回到某一次输入和结果。</p></div></article>
         </div>
-        <figure class="screenshot" data-image="images/13-translator.png"><img src="images/13-translator.png" alt="翻译插件截图"><div class="shot-placeholder"><span class="shot-icon">▧</span><b>截图位置 · 翻译插件</b><small>展示翻译结果、收藏与历史列表</small><code>images/13-translator.png</code></div><figcaption>图 13：中英文翻译、收藏与历史</figcaption></figure>
+        <div class="screenshot-grid three"><figure class="screenshot" data-image="images/13-translator.png"><img src="images/13-translator.png" alt="翻译插件截图"><div class="shot-placeholder"><span class="shot-icon">▧</span><b>截图位置 · 翻译</b><code>images/13-translator.png</code></div><figcaption>图 13-1：中英文翻译</figcaption></figure><figure class="screenshot" data-image="images/13-translator-history.png"><img src="images/13-translator-history.png" alt="翻译历史截图"><div class="shot-placeholder"><span class="shot-icon">▧</span><b>截图位置 · 历史</b><code>images/13-translator-history.png</code></div><figcaption>图 13-2：翻译历史</figcaption></figure><figure class="screenshot" data-image="images/13-translator-favorites.png"><img src="images/13-translator-favorites.png" alt="翻译收藏截图"><div class="shot-placeholder"><span class="shot-icon">▧</span><b>截图位置 · 收藏</b><code>images/13-translator-favorites.png</code></div><figcaption>图 13-3：翻译收藏</figcaption></figure></div>
       </section>
 
       <section class="manual-section" id="formatter">
@@ -359,7 +371,7 @@
 }</code></pre>
         </div>
         <aside class="callout warning"><b>这个示例为什么会报错？</b><p><code>tags</code> 中有连续逗号，多个数组和对象末尾还有 trailing comma。先观察校验错误位置，再删掉多余逗号并重新格式化，适合演示错误诊断。</p></aside>
-        <figure class="screenshot" data-image="images/14-formatter.png"><img src="images/14-formatter.png" alt="JSON 与 XML 格式化工具截图"><div class="shot-placeholder"><span class="shot-icon">▧</span><b>截图位置 · JSON / XML Formatter</b><small>展示错误提示、修复后的格式化结果</small><code>images/14-formatter.png</code></div><figcaption>图 14：格式化并验证 JSON / XML</figcaption></figure>
+        <div class="screenshot-grid"><figure class="screenshot" data-image="images/14-formatter.png"><img src="images/14-formatter.png" alt="JSON 格式化工具截图"><div class="shot-placeholder"><span class="shot-icon">▧</span><b>截图位置 · JSON</b><code>images/14-formatter.png</code></div><figcaption>图 14-1：格式化并验证 JSON</figcaption></figure><figure class="screenshot" data-image="images/14-xml-formatter.png"><img src="images/14-xml-formatter.png" alt="XML 格式化工具截图"><div class="shot-placeholder"><span class="shot-icon">▧</span><b>截图位置 · XML</b><code>images/14-xml-formatter.png</code></div><figcaption>图 14-2：格式化并验证 XML</figcaption></figure></div>
       </section>
 
       <section class="manual-section accent-section" id="create-plugin">
@@ -382,7 +394,7 @@
           <article><span>✎</span><h4>修改插件</h4><p>在右侧列表选中已有开发插件，确认界面显示“当前选中插件”，再描述需要调整的内容。</p></article>
           <article><span>×</span><h4>删除插件</h4><p>选择目标开发插件，点击删除并确认。删除前先确认没有需要保留的代码或配置。</p></article>
         </div>
-        <figure class="screenshot" data-image="images/15-create-plugin-overview.png"><img src="images/15-create-plugin-overview.png" alt="AI 创建插件界面截图"><div class="shot-placeholder"><span class="shot-icon">▧</span><b>截图位置 · 创建插件主界面</b><small>展示自动创建、对话区与开发插件列表</small><code>images/15-create-plugin-overview.png</code></div><figcaption>图 15：新建、选择和管理开发插件</figcaption></figure>
+        <div class="screenshot-grid"><figure class="screenshot" data-image="images/15-create-plugin-overview.png"><img src="images/15-create-plugin-overview.png" alt="AI 新建插件界面截图"><div class="shot-placeholder"><span class="shot-icon">▧</span><b>截图位置 · 新建插件</b><code>images/15-create-plugin-overview.png</code></div><figcaption>图 15-1：新建和管理开发插件</figcaption></figure><figure class="screenshot" data-image="images/15-edit-plugin.png"><img src="images/15-edit-plugin.png" alt="AI 修改插件界面截图"><div class="shot-placeholder"><span class="shot-icon">▧</span><b>截图位置 · 修改插件</b><code>images/15-edit-plugin.png</code></div><figcaption>图 15-2：选中插件后继续修改</figcaption></figure></div>
 
         <h3 class="subsection-title">实际演示：逐步完善天气插件</h3>
         <div class="case-stack">

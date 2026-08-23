@@ -33,6 +33,8 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 a { color: inherit; text-decoration: none; }
+.inline-link { color: var(--accent); font-weight: 700; }
+.inline-link:hover { text-decoration: underline; }
 button { font: inherit; }
 code, kbd { font-family: "DM Mono", Consolas, monospace; }
 code {
@@ -236,6 +238,10 @@ main { margin-left: var(--sidebar); }
 .steps.compact { gap: 14px; margin: 0; }
 
 .screenshot { margin: 32px 0 0; }
+.screenshot-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-top: 32px; }
+.screenshot-grid.three { grid-template-columns: repeat(3, 1fr); }
+.screenshot-grid .screenshot { margin-top: 0; }
+.screenshot-grid .shot-placeholder { min-height: 220px; padding: 22px; }
 .screenshot > img { display: none; width: 100%; height: auto; border: 1px solid var(--line); border-radius: 13px; box-shadow: var(--shadow); }
 .screenshot.has-image > img { display: block; }
 .screenshot.has-image .shot-placeholder { display: none; }
@@ -390,7 +396,7 @@ main { margin-left: var(--sidebar); }
   .section-number { width: 36px; height: 36px; border-radius: 10px; }
   .section-heading h2 { font-size: 24px; }
   .section-intro { font-size: 14px; }
-  .choice-grid, .feature-list, .setting-grid, .split-content.balanced, .action-cards, .shortcut-grid { grid-template-columns: 1fr; }
+  .choice-grid, .feature-list, .setting-grid, .split-content.balanced, .action-cards, .shortcut-grid, .screenshot-grid, .screenshot-grid.three { grid-template-columns: 1fr; }
   .term-row { grid-template-columns: 1fr; gap: 4px; }
   .term-row.head { display: none; }
   .demo-flow { grid-template-columns: 1fr; }
